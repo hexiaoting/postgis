@@ -21,6 +21,9 @@
 # * Copyright 2008 Mark Cave-Ayland
 # *
 # **********************************************************************/
+PG_CONFIG = @PG_CONFIG@
+PGXS := @PGXS@
+include $(PGXS)
 
 CC = @CC@
 CPPFLAGS = @CPPFLAGS@
@@ -28,10 +31,10 @@ CFLAGS = @CFLAGS@ @PICFLAGS@ @WARNFLAGS@ @GEOS_CPPFLAGS@ @PROJ_CPPFLAGS@ @JSON_C
 LDFLAGS = @LDFLAGS@ @GEOS_LDFLAGS@ -lgeos_c @PROJ_LDFLAGS@ -lproj @JSON_LDFLAGS@ -lm
 NUMERICFLAGS = @NUMERICFLAGS@
 top_builddir = @top_builddir@
-prefix = @prefix@
-exec_prefix = @exec_prefix@
-libdir = @libdir@
-includedir = @includedir@
+#prefix = @prefix@
+#exec_prefix = @exec_prefix@
+#libdir = @libdir@
+#includedir = @includedir@
 SHELL = @SHELL@
 INSTALL = @INSTALL@
 LIBTOOL = @LIBTOOL@
